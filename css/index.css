@@ -1,0 +1,121 @@
+/********************** 글로벌 설정 *********************/
+html, body {font-size: 16px; color: #fff; height: 3000px;}
+wrapper {max-width: 1200px; margin: auto;}
+
+/********************** common *********************/
+/* car-box는 차량소개 박스 */
+.car-box {}
+
+
+/********************** header *********************/
+.header-wrapper {position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center;
+  background-color: transparent; padding: 0 2em; z-index: 99;}
+.header-wrapper .front-header {display: flex; align-items: center;}
+.header-wrapper .logo-wrapper {width: 12em; height: 2em; margin-right: 5em;}
+.logo-wrapper .logo-wrap {width: 100%;}
+.logo-wrapper .logo-wrap a > img {width: 100%;}
+
+.header-wrapper .navi-wrapper {display: flex; align-items: center;}
+.navi-wrapper .navi {padding: 2em 1.5em; cursor: pointer; position: relative;}
+.navi-wrapper .navi:hover {color: #ff4605; transition: all .5s;}
+.navi-wrapper .navi i{color: #ff4605; margin-left: .5em;}
+
+.header-wrapper .sign-wrapper {display: flex; flex-shrink: 0; align-items: center; padding: 1em 0;}
+.sign-wrapper .login-wrap {padding: 0 1em; border-right: 1px solid #eee; cursor: pointer;}
+.sign-wrapper .login-wrap > i {margin-right: .5em; color: #ff4605;}
+.sign-wrapper .login-wrap:hover {color: #ff4605; transition: all .5s;}
+.sign-wrapper .sign-wrap {padding: 0 1em; cursor: pointer;}
+.sign-wrapper .sign-wrap:hover {color: #ff4605; transition: all .5s;}
+.sign-wrapper .add-wrap {padding: 1em; border: 1px solid #ff4605; border-radius: 5px; cursor: pointer;}
+.sign-wrapper .add-wrap:hover {background-color: #ff4605; transition: all .5s;}
+
+.navi > .subnavi-wrapper {position: absolute; background-color: #eee; border-radius: 10px; color: #121212; padding: .5em 0; top: 81%;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, .2); opacity: 0; transition: all .25s; transform: translate3d(0,15px,0); visibility: hidden;}
+
+.navi > .subnavi-wrapper:before {content: '▲'; display: inline-block; color: #eee; position: absolute; top: -8%; left: 10%;}
+.navi:nth-child(4) > .subnavi-wrapper:before {top: -10%;}
+.subnavi-wrapper .subnavi-wrap {width: 250px;}
+.subnavi-wrap .subnavi {font-size: 1.125em; padding: .5em 1em; position: relative;}
+.subnavi-wrap .subnavi:hover {color: #ff4605; transition: all .5s;}
+.subnavi-wrap .subnavi:not(:last-child) {border-bottom: 1px solid #ddd;}
+
+.navi .subnavi-wrapper .subnavi i {margin-left: 9em; color: #121212;}
+.navi .subnavi-wrapper .subnavi:hover i {color: #ff4605;}
+.navi:last-child .subnavi-wrapper .subnavi i {margin-left: 4.5em; color: #121212;}
+
+.subnavi .downsub-wrapper {position: absolute; background-color: #eee; border-radius: 10px; color: #121212; padding: 0 .2em; top: -55%; right: -85%; box-shadow: 0 1px 2px 2px rgba(0, 0, 0, .2); opacity: 0; transition: all .25s; transform: translate3d(0,15px,0); visibility: hidden;}
+.downsub-wrapper .downsub-wrap {width: 200px;}
+.downsub-wrap .downsubnavi {font-size: 1em; padding: .5em 1em;}
+.downsub-wrap .downsubnavi:not(:last-child) {border-bottom: 1px solid #ddd;}
+.downsub-wrap .downsubnavi:hover {color: #ff4605; transition: all .5s;}
+
+.front-header .mo-menu {display: none; font-size: 1em; color: #ff4605; padding: 2em 1em; cursor: pointer;}
+.front-header .mo-login {display: none; font-size: 1em; color: #fff; padding: 2em 1em; cursor: pointer;}
+.front-header .mo-login:hover {color: #ff4605; transition: all .5s;}
+
+
+/********************** main *********************/
+.main-wrapper {position: relative; width: 100%; height: 90vh; overflow: hidden; background-color: black;}
+.main-wrapper .maindesc-wrapper {position: absolute;}
+
+.main-wrapper .slide-wrapper {position: absolute; top: 0; left: 0; width: 100%;}
+.main-wrapper .slide-wrap {width: 100%;}
+.main-wrapper .slide img {width: 100%; height: 100%; opacity: 0;}
+.main-wrapper .slide.active > img {opacity: 1; transform: scale(1.2); transition: all 2s;}
+
+/********************** handy *********************/
+
+
+
+/********************** popular *********************/
+
+
+
+/********************** why *********************/
+
+
+
+/********************** team *********************/
+
+
+
+/********************** down *********************/
+
+
+
+/********************** news *********************/
+
+
+
+/********************** footer *********************/
+
+
+
+
+
+/********************** 반응형 설정 *********************/
+@media (max-width: 1399px) {
+  
+}
+
+@media (max-width: 1199px) {
+  .header-wrapper {display: block;}
+  .header-wrapper .navi-wrapper {display: none;}
+  .header-wrapper .sign-wrapper {display: none;}
+  .header-wrapper .logo-wrapper {margin: 1em 0;}
+  .front-header {justify-content: space-between;}
+  .front-header .mo-menu {display: inline-block;}
+  .front-header .mo-login {display: inline-block;}
+}
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 767px) {
+  
+}
+
+@media (max-width: 575px) {
+  
+}
