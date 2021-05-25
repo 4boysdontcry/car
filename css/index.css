@@ -55,13 +55,30 @@ wrapper {max-width: 1200px; margin: auto;}
 
 
 /********************** main *********************/
-.main-wrapper {position: relative; width: 100%; height: 90vh; overflow: hidden; background-color: black;}
-.main-wrapper .maindesc-wrapper {position: absolute;}
+.main-wrapper {position: relative; width: 100%; height: 80vh; overflow: hidden;}
+.main-wrapper .maindesc-wrapper {width: 100%;}
+.main-wrapper .maindesc-wrap {position: absolute; top: 50%; left: 50%; z-index: 98; transform: translate(-50%, -50%);}
+.maindesc-wrap .desc-title {font-size: 4em; font-weight: 700; margin-bottom: 1em;}
+.maindesc-wrap .desc-title span{color: #ff4605;}
 
-.main-wrapper .slide-wrapper {position: absolute; top: 0; left: 0; width: 100%;}
-.main-wrapper .slide-wrap {width: 100%;}
-.main-wrapper .slide img {width: 100%; height: 100%; opacity: 0;}
-.main-wrapper .slide.active > img {opacity: 1; transform: scale(1.2); transition: all 2s;}
+.maindesc-wrapper .subject-wrapper {display: flex; justify-content: center; align-items: center;}
+.maindesc-wrapper .subject-wrapper .subject {cursor: pointer; font-size: 1.2em; padding: 0 .5em 1.2em .5em; position: relative;}
+.maindesc-wrapper .subject-wrapper .subject::after {content: "▲"; display: none; position: absolute; bottom: -3px; right: 35%;}
+.maindesc-wrapper .subject-wrapper .subject:hover {color: #ff4605; transition: all .5s;}
+.maindesc-wrapper .subject-wrapper .subject:not(:last-child) {margin-right: 1.5em;}
+
+.maindesc-wrapper .form-wrapper {background-color: #fff; padding: 1em 2em; border-radius: 10px; box-shadow: 0 10px 0 rgba(255, 255, 255, .5);}
+.form-wrapper input {padding: .5em; border: 2px solid #eee; border-radius: 10px;}
+.form-wrapper .bt-search {padding: .7em; background-color: #ff4605; color: #fff; border-radius: 5px;}
+
+.main-wrapper .slide-wrapper {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.main-wrapper .slide-wrap {width: 100%; height: 100%;}
+.main-wrapper .slide .img-wrap {width: 100%; height: 100%;}
+.main-wrapper .slide.slide1 .img-wrap {background-image: url(../img/slide/slide-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.main-wrapper .slide.slide2 .img-wrap {background-image: url(../img/slide/slide-2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.main-wrapper .slide.slide3 .img-wrap {background-image: url(../img/slide/slide-3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.main-wrapper .slide .img-wrap {}
+.main-wrapper .slide .img-wrap.active {transition: all 5s; transform: scale(1.5);}
 
 /********************** handy *********************/
 
