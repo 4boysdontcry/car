@@ -7,15 +7,12 @@ slideMain();
 function slideMain() {
 	var swiper;
   swiper = getSwiper('.slide-wrapper', { break: 1, auto: false, delay: 5000 });
-  swiper.on('slideChange', onChange)
-  function onChange() {
-    for(var i=0; i<$('.slide').length; i++){
-      $('.slide').find('.img-wrap').removeClass('active')
-      $('.slide').eq(i).find('.img-wrap').addClass('active')
-    $('.slide').eq(i).find('.img-wrap').fadeIn(5000)
-    }
+  swiper.on('slideChange', chgAni)
+  function chgAni() {
+      $(this).addClass('active')
   }
 }
+
 
 /*************** 이벤트 등록 *****************/
 $('.subnavi').on('mouseenter', onSubnavi)
@@ -24,18 +21,16 @@ $('.subnavi').on('mouseleave', offSubnavi)
 $('.navi').on('mouseenter', onShowSubnavi)
 $('.navi').on('mouseleave', onHideSubnavi)
 
-// $('.subject').on('click', showArrow)
-$('.subject').on('click', chgColor)
+
+$('.subject').on('click', onActive)
 
 /*************** 이벤트 콜백 *****************/
-// function showArrow(){
 
-// }
-
-function chgColor(){
+function onActive(){
   $('.subject').css('color', '#fff')
-  $('.subject::after').css('display', 'inline-block')
   $(this).css('color', '#ff4605')
+  $('.subject').removeClass('active')
+  $(this).addClass('active')
 }
 
 function onSubnavi(){

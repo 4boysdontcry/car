@@ -1,6 +1,6 @@
 /********************** 글로벌 설정 *********************/
 html, body {font-size: 16px; color: #fff; height: 3000px;}
-wrapper {max-width: 1200px; margin: auto;}
+.wrapper {max-width: 1400px; margin: auto;}
 
 /********************** common *********************/
 /* car-box는 차량소개 박스 */
@@ -57,19 +57,26 @@ wrapper {max-width: 1200px; margin: auto;}
 /********************** main *********************/
 .main-wrapper {position: relative; width: 100%; height: 80vh; overflow: hidden;}
 .main-wrapper .maindesc-wrapper {width: 100%;}
-.main-wrapper .maindesc-wrap {position: absolute; top: 50%; left: 50%; z-index: 98; transform: translate(-50%, -50%);}
-.maindesc-wrap .desc-title {font-size: 4em; font-weight: 700; margin-bottom: 1em;}
+.main-wrapper .maindesc-wrap {width: 70%; position: absolute; top: 50%; left: 50%; z-index: 98; transform: translate(-50%, -50%);
+display: flex; flex-direction: column; align-items: center;}
+.maindesc-wrap .desc-title {font-size: 4em; font-weight: 700; margin-bottom: 1em; text-align: center;}
 .maindesc-wrap .desc-title span{color: #ff4605;}
 
 .maindesc-wrapper .subject-wrapper {display: flex; justify-content: center; align-items: center;}
 .maindesc-wrapper .subject-wrapper .subject {cursor: pointer; font-size: 1.2em; padding: 0 .5em 1.2em .5em; position: relative;}
-.maindesc-wrapper .subject-wrapper .subject::after {content: "▲"; display: none; position: absolute; bottom: -3px; right: 35%;}
+.maindesc-wrapper .subject-wrapper .subject:nth-child(1)::after {display: none; content: "▲"; position: absolute; bottom: -2px; left: 36%; color: #fff;}
+.maindesc-wrapper .subject-wrapper .subject:nth-child(2)::after {display: none; content: "▲"; position: absolute; bottom: -2px; left: 36%; color: #fff;}
+.maindesc-wrapper .subject-wrapper .subject:nth-child(3)::after {display: none; content: "▲"; position: absolute; bottom: -2px; left: 36%; color: #fff;}
+.maindesc-wrapper .subject-wrapper .subject.active::after {display: inline-block;}
+.maindesc-wrapper .subject-wrapper .subject:first-child {color: #ff4605; cursor: pointer; font-size: 1.2em; padding: 0 .5em 1.2em .5em; position: relative;}
 .maindesc-wrapper .subject-wrapper .subject:hover {color: #ff4605; transition: all .5s;}
 .maindesc-wrapper .subject-wrapper .subject:not(:last-child) {margin-right: 1.5em;}
 
-.maindesc-wrapper .form-wrapper {background-color: #fff; padding: 1em 2em; border-radius: 10px; box-shadow: 0 10px 0 rgba(255, 255, 255, .5);}
-.form-wrapper input {padding: .5em; border: 2px solid #eee; border-radius: 10px;}
+.maindesc-wrapper .form-wrapper {display: block; background-color: #fff; padding: 1em 2em; border-radius: 10px;
+  box-shadow: 0 10px 0 rgba(255, 255, 255, .5);}
+.form-wrapper input {width: 30%; padding: .5em; border: 2px solid #eee; border-radius: 10px;}
 .form-wrapper .bt-search {padding: .7em; background-color: #ff4605; color: #fff; border-radius: 5px;}
+.form-wrapper .bt-search2 {display: none; width: 100%; padding: .7em; background-color: #ff4605; color: #fff; border-radius: 5px;}
 
 .main-wrapper .slide-wrapper {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 .main-wrapper .slide-wrap {width: 100%; height: 100%;}
@@ -77,12 +84,33 @@ wrapper {max-width: 1200px; margin: auto;}
 .main-wrapper .slide.slide1 .img-wrap {background-image: url(../img/slide/slide-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
 .main-wrapper .slide.slide2 .img-wrap {background-image: url(../img/slide/slide-2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
 .main-wrapper .slide.slide3 .img-wrap {background-image: url(../img/slide/slide-3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;}
-.main-wrapper .slide .img-wrap {}
-.main-wrapper .slide .img-wrap.active {transition: all 5s; transform: scale(1.5);}
+.main-wrapper .slide .img-wrap {margin: 0;}
+.main-wrapper .slide .img-wrap.active {transition: all 5s; transform: scale(1.2);}
 
 /********************** handy *********************/
+.handy-wrapper {width: 100%; color: #121212;}
+.handy-wrapper .top-wrapper {display: flex; align-items: center; justify-content: space-between; margin: 2em 0;}
+.top-wrapper .title-wrap h3.subtitle {font-size: 1.5em; color: #ff4605; margin-bottom: .5em;}
+.top-wrapper .title-wrap h2.title {font-size: 3.5em; font-weight: 700;}
+.top-wrapper .bt-wrapper {display: flex; align-items: center;}
+.top-wrapper .bt-wrapper .bt-handy {padding: .725em 2em; font-size: 1.25em; border-radius: 10px; background-color: #b5b5b557;}
+.top-wrapper .bt-wrapper .bt-handy.active {color: #ff4605; border: 1px solid #ff4605;; background-color: #ffab8d57;}
 
+.handy-wrapper .list-wrapper {width: 100%; height: 530px; display: flex;}
+.list-wrapper .list {background-color: #222732; border-radius: 15px; overflow: hidden; color: #fff;}
+.list .img-wrap {width: 100%; overflow: hidden;}
+.list .img-wrap img {width: 100%; height: 100%;}
+.desc-wrap {padding: .5em 2em;}
+.desc-wrap .title {width: 100%;}
+.desc-wrap .title h4 {font-size: 1.5em; padding: 1em 0; border-bottom: 1px solid #ddd;}
+.desc-wrap .article {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1em 0;}
+.desc-wrap .article .year {background-color: #ff4605; padding: .25em .45em; font-size: 1.125em; border-radius: 5px; text-align: center;}
+.desc-wrap .article .opt-wrap {display: flex; align-items: center; color: #ddd;}
+.desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: 1em;}
+.desc-wrap .article .price {font-size: 2em; font-weight: 700;}
 
+.list-wrapper .list.li1 {width: 50%; margin-right: 1%;}
+.list-wrapper .list.smli {width: 25%; height: 50%; margin: 1%;}
 
 /********************** popular *********************/
 
@@ -123,9 +151,14 @@ wrapper {max-width: 1200px; margin: auto;}
   .front-header {justify-content: space-between;}
   .front-header .mo-menu {display: inline-block;}
   .front-header .mo-login {display: inline-block;}
+
+  .form-wrapper input {width: 100%; margin-bottom: .5em;}
+  .form-wrapper .bt-search {display: none;}
+  .form-wrapper .bt-search2 {display: inline-block;}
 }
 
 @media (max-width: 991px) {
+  .maindesc-wrap .desc-title {font-size: 2em;}
   
 }
 
@@ -134,5 +167,6 @@ wrapper {max-width: 1200px; margin: auto;}
 }
 
 @media (max-width: 575px) {
+  .maindesc-wrap .desc-title {font-size: 1.65em;}
   
 }
