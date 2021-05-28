@@ -1,6 +1,6 @@
 /********************** 글로벌 설정 *********************/
 html, body {font-size: 16px; color: #fff; height: 3000px;}
-.wrapper {max-width: 1400px; margin: auto;}
+.wrapper {max-width: 1300px; margin: auto;}
 
 /********************** common *********************/
 /* car-box는 차량소개 박스 */
@@ -87,6 +87,7 @@ display: flex; flex-direction: column; align-items: center;}
 .main-wrapper .slide .img-wrap {margin: 0;}
 .main-wrapper .slide .img-wrap.active {transition: all 5s; transform: scale(1.2);}
 
+
 /********************** handy *********************/
 .handy-wrapper {width: 100%; color: #121212;}
 .handy-wrapper .top-wrapper {display: flex; align-items: center; justify-content: space-between; margin: 2em 0;}
@@ -96,21 +97,35 @@ display: flex; flex-direction: column; align-items: center;}
 .top-wrapper .bt-wrapper .bt-handy {padding: .725em 2em; font-size: 1.25em; border-radius: 10px; background-color: #b5b5b557;}
 .top-wrapper .bt-wrapper .bt-handy.active {color: #ff4605; border: 1px solid #ff4605;; background-color: #ffab8d57;}
 
-.handy-wrapper .list-wrapper {width: 100%; height: 530px; display: flex;}
+.handy-wrapper .list-wrapper {width: 100%; height: 680px; display: flex; justify-content: space-between;}
 .list-wrapper .list {background-color: #222732; border-radius: 15px; overflow: hidden; color: #fff;}
+.list-wrapper .list:hover img {transform: scale(1.1); transition: all 1s;}
 .list .img-wrap {width: 100%; overflow: hidden;}
 .list .img-wrap img {width: 100%; height: 100%;}
-.desc-wrap {padding: .5em 2em;}
-.desc-wrap .title {width: 100%;}
-.desc-wrap .title h4 {font-size: 1.5em; padding: 1em 0; border-bottom: 1px solid #ddd;}
-.desc-wrap .article {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1em 0;}
-.desc-wrap .article .year {background-color: #ff4605; padding: .25em .45em; font-size: 1.125em; border-radius: 5px; text-align: center;}
-.desc-wrap .article .opt-wrap {display: flex; align-items: center; color: #ddd;}
-.desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: 1em;}
-.desc-wrap .article .price {font-size: 2em; font-weight: 700;}
 
-.list-wrapper .list.li1 {width: 50%; margin-right: 1%;}
-.list-wrapper .list.smli {width: 25%; height: 50%; margin: 1%;}
+.desc-wrap {padding: .5em 2em;}
+.list-wrapper .list.li1 {max-width: 49%; margin-right: 1%; flex-grow: 1; flex-shrink: 1;}
+.li1 .desc-wrap .title {width: 100%;}
+.li1 .desc-wrap .title h4 {font-size: 1.5em; padding: 1em 0; border-bottom: 1px solid #ddd;}
+.li1 .desc-wrap .article {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1em 0;}
+.li1 .desc-wrap .article .year {background-color: #ff4605; padding: .25em .45em; font-size: 1.125em; border-radius: 5px; text-align: center;}
+.li1 .desc-wrap .article .opt-wrap {display: flex; align-items: center; color: #ddd;}
+.li1 .desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: 1em;}
+.li1 .desc-wrap .article .price {font-size: 2em; font-weight: 700;}
+
+.list-wrapper .list-wrap {max-width: 50%; height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.list-wrapper .list-wrap .list {width: 49%; max-height: 49%; margin: 0 1% 1% 0;}
+.list-wrapper .list-wrap .list:nth-child(3) { margin: 0 1% 0 0;;}
+.list-wrapper .list-wrap .list:nth-child(4) { margin: 0 1% 0 0;}
+.list-wrap .desc-wrap {padding: .5em 1em;}
+.list-wrap .desc-wrap .title {width: 100%;}
+.list-wrap .desc-wrap .title h4 {font-size: .9em; margin-bottom: .325em;}
+.list-wrap .desc-wrap .price {font-size: .9em; font-weight: 700; padding-bottom: .325em; border-bottom: 1px solid #ddd;}
+.list-wrap .desc-wrap .article {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: .5em 0;}
+.list-wrap .desc-wrap .article .year {background-color: #ff4605; padding: .25em .45em; font-size: .875em; border-radius: 5px;
+  text-align: center;}
+.list-wrap .desc-wrap .article .opt-wrap {display: flex; align-items: center; color: #ddd;}
+.list-wrap .desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: .5em;}
 
 /********************** popular *********************/
 
@@ -144,6 +159,7 @@ display: flex; flex-direction: column; align-items: center;}
 }
 
 @media (max-width: 1199px) {
+  .wrapper {max-width: 1300px; margin: 1em;}
   .header-wrapper {display: block;}
   .header-wrapper .navi-wrapper {display: none;}
   .header-wrapper .sign-wrapper {display: none;}
