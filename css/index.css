@@ -9,7 +9,11 @@ html, body {font-size: 16px; color: #fff; height: 3000px;}
 
 /********************** header *********************/
 .header-wrapper {position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center;
-  background-color: transparent; padding: 0 2em; z-index: 99;}
+  background-color: transparent; padding: 0 2em; z-index: 99; top: 0; transition: all .3s;}
+.header-wrapper.active {background-color: #fff; color: #121212; box-shadow: 0 0 5px rgba(0, 0, 0, .5);}
+.header-wrapper.active .add-wrap  {color: #ff4605;}
+.header-wrapper.active .add-wrap:hover {color: #fff; background-color: #ff4605; transition: all .5s;}
+
 .header-wrapper .front-header {display: flex; align-items: center;}
 .header-wrapper .logo-wrapper {width: 12em; height: 2em; margin-right: 5em;}
 .logo-wrapper .logo-wrap {width: 100%;}
@@ -126,6 +130,16 @@ display: flex; flex-direction: column; align-items: center;}
   text-align: center;}
 .list-wrap .desc-wrap .article .opt-wrap {display: flex; align-items: center; color: #ddd;}
 .list-wrap .desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: .5em;}
+
+.handy-wrapper .bot-wrapper {margin: 1em 0; width: 100%; padding: 1em; display: flex; justify-content: space-between; align-items: center;}
+.bot-wrapper .sns-wrap {display: flex; justify-content: space-between; align-items: center;}
+.sns-wrap > p {margin-right: 2em; font-size: 1.5em; color: #ccc;}
+.sns-wrap > a {margin-right: 1em; font-size: 1.325em; background-color: #ccc; padding: .5em; border-radius: 50%;}
+.sns-wrap > :nth-child(3) {padding: .5em .7em;}
+.sns-wrap > a > i {font-size: 1em; color: #eeeeee;}
+.sns-wrap > a:hover > i {transform: scale(1.2); transition: all 1s; color: #ff4605;}
+.bt-wrap > .bt-view {font-size: 1.5em; background-color: #ff4605; border-radius: 5px; padding: .5em 1.25em; color: #fff;} 
+
 
 /********************** popular *********************/
 

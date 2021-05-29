@@ -1,16 +1,45 @@
 {
 	"handy": [{
-			"title": "Chevrolet Camaro 2-door convertible blue",
-			"year": "2021",
-			"price": "$40,000",
-			"opt1": "Convertible",
-			"opt2": "Diesel",
-			"opt3": ""
+			"src": "../img/handy/handy2-1.webp",
+			"title": "Mercedes-Benz AMG GT 2-door coupe yellow",
+			"year": "2020",
+			"price": "$14,600",
+			"opt1": "160,000 miles",
+			"opt2": "Coupe",
+			"opt3": "Diesel"
 		},
 	  {
-			"title": "Chevrolet Camaro 2-door convertible blue",
-			"year": "2021",
-			"price": "$40,000",
+			"src": "../img/handy/handy2-2.jpg",
+			"title": "Porsche Macan 5-door SUV blue",
+			"year": "2020",
+			"price": "$14,600",
+			"opt1": "190,000 miles",
+			"opt2": "SUV",
+			"opt3": "Diesel"
+		},
+	  {
+			"src": "../img/handy/handy2-3.webp",
+			"title": "Audi A4 4-door sedan blue",
+			"year": "2020",
+			"price": "$23,000",
+			"opt1": "240,000 miles",
+			"opt2": "Sedan",
+			"opt3": "Diesel"
+		},
+	  {
+			"src": "../img/handy/handy2-4.webp",
+			"title": "Audi A8 4-door sedan blue",
+			"year": "2020",
+			"price": "$14,600",
+			"opt1": "400,000 miles",
+			"opt2": "Sedan",
+			"opt3": "Petrol"
+		},
+	  {
+			"src": "../img/handy/handy2-5.jpg",
+			"title": "Audi A8 4-door sedan silver",
+			"year": "2016",
+			"price": "$30,000",
 			"opt1": "Convertible",
 			"opt2": "Diesel",
 			"opt3": ""

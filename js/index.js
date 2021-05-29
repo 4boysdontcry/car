@@ -7,19 +7,32 @@ $(document).ready(function(){
   $('.bt-new').addClass('active')
 })
 
-slideMain();
-
-function slideMain() {
-	var swiper;
-  swiper = getSwiper('.slide-wrapper', { break: 1, auto: false, delay: 5000 });
-  swiper.on('slideChange', chgAni)
-  function chgAni() {
-      $(this).addClass('active')
+function scrollNotice(scTop) {
+  var $header = $('.header-wrapper');
+  var headerHeight;
+  if(scTop == 0) {
+    $header.css('top', 'unset');
+    $header.removeClass('active');
+    $header.find('.logo-wrap .logo').attr('src', '../img/logo-header-white.webp')
   }
+  else {
+    headerHeight = $header.outerHeight();
+    $header.css('top', -headerHeight + 'px');
+    $header.css('top');
+    $header.css('top', 0);
+    $header.addClass('active');
+    $header.find('.logo-wrap .logo').attr('src', '../img/logo-header-black.webp')
+  }
+}
+function movingTop(scTop) {
+  if(scTop === 0) $('.bt-moving-top').removeClass('active');
+  else $('.bt-moving-top').addClass('active');
 }
 
 
 /*************** 이벤트 등록 *****************/
+$(window).scroll(onScroll).trigger('scroll');
+
 $('.subnavi').on('mouseenter', onSubnavi)
 $('.subnavi').on('mouseleave', offSubnavi)
 $('.navi').on('mouseenter', onShowSubnavi)
@@ -32,6 +45,12 @@ $('.bt-new').on('click', onChgNew)
 
 
 /*************** 이벤트 콜백 *****************/
+function onScroll(e) {
+  var scTop = $(this).scrollTop();
+  scrollNotice(scTop);
+  movingTop(scTop);
+}
+
 function onChgNew(){
   $('.bt-handy').removeClass('active')
   $(this).addClass('active')
@@ -40,10 +59,14 @@ function onChgNew(){
 function onChgUsed(){   // json 파일의 데이터로 교체되는 로직짜기
   $('.bt-handy').removeClass('active')
   $(this).addClass('active')
-  $('.list-wrapper .list').find('img').attr('src', v.src)
-  $('.list-wrapper .list').find('.desc-wrap .title').val(v.title)
-  $('.list-wrapper .list').find('.desc-wrap .price').val(v.year)
-  $('.list-wrapper .list').find('.desc-wrap .opt').val(v.year)
+  function onGetData(v){
+    for(v in '.list-wrapper')
+    $('.list-wrapper .list').find('.img').attr('src', v.src)
+    // $('.list-wrapper .list').find('.desc-wrap .title-wrap .title-wrap').val(v.title)
+    // $('.list-wrapper .list').find('.desc-wrap .price').val(v.year)
+    // $('.list-wrapper .list').find('.desc-wrap .opt').val(v.opt)
+  }
+  $.get('../json/handy.json', onGetData);
 }
 
 function onActive(){
