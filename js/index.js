@@ -13,6 +13,7 @@ function scrollNotice(scTop) {
   if(scTop == 0) {
     $header.css('top', 'unset');
     $header.removeClass('active');
+    $('.front-header .mo-login').css('color', '#fff')
     $header.find('.logo-wrap .logo').attr('src', '../img/logo-header-white.webp')
   }
   else {
@@ -21,6 +22,7 @@ function scrollNotice(scTop) {
     $header.css('top');
     $header.css('top', 0);
     $header.addClass('active');
+    $('.front-header .mo-login').css('color', '#ff4605')
     $header.find('.logo-wrap .logo').attr('src', '../img/logo-header-black.webp')
   }
 }
@@ -31,6 +33,7 @@ function movingTop(scTop) {
 
 
 /*************** 이벤트 등록 *****************/
+// onGetData();
 $(window).scroll(onScroll).trigger('scroll');
 
 $('.subnavi').on('mouseenter', onSubnavi)
@@ -47,8 +50,8 @@ $('.bt-new').on('click', onChgNew)
 /*************** 이벤트 콜백 *****************/
 function onScroll(e) {
   var scTop = $(this).scrollTop();
-  scrollNotice(scTop);
   movingTop(scTop);
+  scrollNotice(scTop)
 }
 
 function onChgNew(){
@@ -59,15 +62,35 @@ function onChgNew(){
 function onChgUsed(){   // json 파일의 데이터로 교체되는 로직짜기
   $('.bt-handy').removeClass('active')
   $(this).addClass('active')
-  function onGetData(v){
-    for(v in '.list-wrapper')
-    $('.list-wrapper .list').find('.img').attr('src', v.src)
-    // $('.list-wrapper .list').find('.desc-wrap .title-wrap .title-wrap').val(v.title)
-    // $('.list-wrapper .list').find('.desc-wrap .price').val(v.year)
-    // $('.list-wrapper .list').find('.desc-wrap .opt').val(v.opt)
   }
-  $.get('../json/handy.json', onGetData);
-}
+
+// function onGetData(r) {
+//   var $listWrap = $('.list-wrapper .list-wrap')
+//   lastIdx = r.handynew.length - 1;
+//   r.handynew.forEach(function(v, i){
+//     var html = '';
+//     html += '<li class="list li2 smli">';
+//     html += '<div class="img-wrap">';
+//     html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+//     html += '</div>';
+//     html += '<div class="desc-wrap">';
+//     html += '<div class="title">';
+//     html += '<h4 class="title-wrap">'+v.title+'</h4>';
+//     html += '<div class="price">'+v.price+'</div>';
+//     html += '</div>';
+//     html += '<div class="article">';
+//     html += '<div class="year">'+v.year+'</div>';
+//     html += '<div class="opt-wrap">';
+//     html += '<div class="opt opt1">'+v.opt2+'</div>';
+//     html += '<div class="opt opt2">'+v.opt1+'</div>';
+//     html += '</div>';
+//     html += '</div>';
+//     html += '</div>';
+//     html += '</li>';
+//     $listWrap.append(html);
+//   })
+// $.get('../json/handynew.json', onGetData);
+// }
 
 function onActive(){
   $('.subject').css('color', '#fff')
@@ -92,3 +115,13 @@ function onShowSubnavi(){
 function onHideSubnavi(){
   $(this).find('.subnavi-wrapper').css({"opacity": "0", "visibility": "hidden"})
 }
+
+
+
+
+
+
+
+
+
+

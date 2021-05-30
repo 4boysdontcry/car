@@ -1,12 +1,12 @@
 {
-	"handy": [{
+	"handy": [
+		{
 			"src": "../img/handy/handy2-1.webp",
 			"title": "Mercedes-Benz AMG GT 2-door coupe yellow",
 			"year": "2020",
 			"price": "$14,600",
 			"opt1": "160,000 miles",
-			"opt2": "Coupe",
-			"opt3": "Diesel"
+			"opt2": "Coupe"
 		},
 	  {
 			"src": "../img/handy/handy2-2.jpg",
@@ -14,8 +14,7 @@
 			"year": "2020",
 			"price": "$14,600",
 			"opt1": "190,000 miles",
-			"opt2": "SUV",
-			"opt3": "Diesel"
+			"opt2": "SUV"
 		},
 	  {
 			"src": "../img/handy/handy2-3.webp",
@@ -23,8 +22,7 @@
 			"year": "2020",
 			"price": "$23,000",
 			"opt1": "240,000 miles",
-			"opt2": "Sedan",
-			"opt3": "Diesel"
+			"opt2": "Sedan"
 		},
 	  {
 			"src": "../img/handy/handy2-4.webp",
@@ -32,8 +30,7 @@
 			"year": "2020",
 			"price": "$14,600",
 			"opt1": "400,000 miles",
-			"opt2": "Sedan",
-			"opt3": "Petrol"
+			"opt2": "Sedan"
 		},
 	  {
 			"src": "../img/handy/handy2-5.jpg",
@@ -41,8 +38,7 @@
 			"year": "2016",
 			"price": "$30,000",
 			"opt1": "Convertible",
-			"opt2": "Diesel",
-			"opt3": ""
+			"opt2": "Diesel"
 		}
   ]
 }

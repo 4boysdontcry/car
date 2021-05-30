@@ -142,8 +142,13 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** popular *********************/
+.popular-wrapper {width: 100%; background-color: #def1ff; padding: 2em 0;}
+.popular-wrapper .title-wrapper {display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;}
+.title-wrap .title {font-size: 3em; font-weight: 700; color: #121212;}
+.bt-wrap .bt-car {padding: .725em 1em; background-color: #eee; border-radius: 5px;}
 
-
+.popular-wrapper .list-wrapper {width: 100%; display: flex;}
+.list-wrapper .list {width: 20%;}
 
 /********************** why *********************/
 
