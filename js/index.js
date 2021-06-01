@@ -31,6 +31,15 @@ function movingTop(scTop) {
   else $('.bt-moving-top').addClass('active');
 }
 
+function slideMain() {
+  var swiper = getSwiper('.swiper-wrapper', {
+    auto: true,
+    delay: 3000,
+    loop: true,
+    space: 0,
+    break: 1
+  })
+}
 
 /*************** 이벤트 등록 *****************/
 // onGetData();

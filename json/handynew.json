@@ -8,7 +8,7 @@
 			"opt1": "Automatic",
 			"opt2": "petrol"
 		},
-	  {
+		{
 			"src": "../img/handy/handy2.webp",
 			"title": "Chevrolet Camaro 2-door convertible blue",
 			"year": "2021",
@@ -16,7 +16,7 @@
 			"opt1": "Convertible",
 			"opt2": "Diesel"
 		},
-	  {
+		{
 			"src": "../img/handy/handy3.webp",
 			"title": "Ferrari LaFerrari 2-door coupe red",
 			"year": "2021",
@@ -24,7 +24,7 @@
 			"opt1": "Coupe",
 			"opt2": "Diesel"
 		},
-	  {
+		{
 			"src": "../img/handy/handy4.webp",
 			"title": "Audi A8 4-door sedan silver",
 			"year": "2021",
@@ -32,7 +32,7 @@
 			"opt1": "sedan",
 			"opt2": "Diesel"
 		},
-	  {
+		{
 			"src": "../img/handy/handy5.webp",
 			"title": "Mercedes-Benz S-class 2-door coupe silver",
 			"year": "2021",
@@ -40,5 +40,5 @@
 			"opt1": "Coupe",
 			"opt2": "Diesel"
 		}
-  ]
+	]
 }
