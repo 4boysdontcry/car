@@ -1,12 +1,13 @@
 /*************** 글로벌 설정 *****************/
+$(window).scroll(onScroll).trigger('scroll');
 
-
-/*************** 사용자 함수 *****************/
 $(document).ready(function(){
   $('.sb1').addClass('active')
   $('.bt-new').addClass('active')
 })
 
+
+/*************** 사용자 함수 *****************/
 function scrollNotice(scTop) {
   var $header = $('.header-wrapper');
   var headerHeight;
@@ -32,18 +33,13 @@ function movingTop(scTop) {
 }
 
 function slideMain() {
-  var swiper = getSwiper('.swiper-wrapper', {
-    auto: true,
-    delay: 3000,
-    loop: true,
-    space: 0,
-    break: 1
-  })
+  console.log('hi');
+	var swiper = new Swiper('.swiper-container', { auto: true, loop: true, delay: 3000 });
 }
+slideMain();
 
 /*************** 이벤트 등록 *****************/
-// onGetData();
-$(window).scroll(onScroll).trigger('scroll');
+
 
 $('.subnavi').on('mouseenter', onSubnavi)
 $('.subnavi').on('mouseleave', offSubnavi)
@@ -66,40 +62,116 @@ function onScroll(e) {
 function onChgNew(){
   $('.bt-handy').removeClass('active')
   $(this).addClass('active')
+  $(this).addClass('active')
+  function onGetData(r) {
+    r.handy.forEach(function (v, i) {
+      var html = '';
+      html += '<li class="list li1">';
+      html += '<div class="img-wrap">';
+      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+      html += '</div>';
+      html += '<div class="desc-wrap">';
+      html += '<div class="title">';
+      html += '<h4 class="title-wrap">'+v.title+'</h4>';
+      html += '</div>';
+      html += '<div class="article">';
+      html += '<div class="year">'+v.year+'</div>';
+      html += '<div class="opt-wrap">';
+      html += '<div class="opt opt1">'+v.opt1+'</div>';
+      html += '<div class="opt opt2">'+v.opt2+'</div>';
+      html += '</div>';
+      html += '<div class="price">'+v.price+'</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+      if(r.handy == 1){
+      html += '<li class="list-subwrap">';
+      html += '<ul class="list-wrap">';
+      html += '<li class="list li2 smli">';
+      html += '<div class="img-wrap">';
+      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+      html += '</div>';
+      html += '<div class="desc-wrap">';
+      html += '<div class="title">';
+      html += '<h4 class="title-wrap">'+v.title+'</h4>';
+      html += '<div class="price">'+v.price+'</div>';
+      html += '</div>';
+      html += '<div class="article">';
+      html += '<div class="year">'+v.year+'</div>';
+      html += '<div class="opt-wrap">';
+      html += '<div class="opt opt1">'+v.opt1+'</div>';
+      html += '<div class="opt opt2">'+v.opt2+'</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+      html += '<li class="list li3 smli">';
+      html += '<div class="img-wrap">';
+      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+      html += '</div>';
+      html += '<div class="desc-wrap">';
+      html += '<div class="title">';
+      html += '<h4 class="title-wrap">'+v.title+'</h4>';
+      html += '<div class="price">'+v.price+'</div>';
+      html += '</div>';
+      html += '<div class="article">';
+      html += '<div class="year">'+v.year+'</div>';
+      html += '<div class="opt-wrap">';
+      html += '<div class="opt opt1">'+v.opt1+'</div>';
+      html += '<div class="opt opt2">'+v.opt2+'</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+      html += '<li class="list li4 smli">';
+      html += '<div class="img-wrap">';
+      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+      html += '</div>';
+      html += '<div class="desc-wrap">';
+      html += '<div class="title">';
+      html += '<h4 class="title-wrap">'+v.title+'</h4>';
+      html += '<div class="price">'+v.price+'</div>';
+      html += '</div>';
+      html += '<div class="article">';
+      html += '<div class="year">'+v.price+'</div>';
+      html += '<div class="opt-wrap">';
+      html += '<div class="opt opt1">'+v.opt1+'</div>';
+      html += '<div class="opt opt2">'+v.opt2+'</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+      html += '<li class="list li5 smli">';
+      html += '<div class="img-wrap">';
+      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+      html += '</div>';
+      html += '<div class="desc-wrap">';
+      html += '<div class="title">';
+      html += '<h4 class="title-wrap">'+v.title+'r</h4>';
+      html += '<div class="price">'+v.price+'</div>';
+      html += '</div>';
+      html += '<div class="article">';
+      html += '<div class="year">'+v.price+'</div>';
+      html += '<div class="opt-wrap">';
+      html += '<div class="opt opt1">'+v.opt1+'</div>';
+      html += '<div class="opt opt2">'+v.opt2+'</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+      html += '</ul>';
+      html += '</li>';
+    }
+    $('.list-wrapper').append(html);
+  })
+}
+$.get('../json/handynew.json', onGetData);
 }
 
 function onChgUsed(){   // json 파일의 데이터로 교체되는 로직짜기
   $('.bt-handy').removeClass('active')
-  $(this).addClass('active')
-  }
+}
 
-// function onGetData(r) {
-//   var $listWrap = $('.list-wrapper .list-wrap')
-//   lastIdx = r.handynew.length - 1;
-//   r.handynew.forEach(function(v, i){
-//     var html = '';
-//     html += '<li class="list li2 smli">';
-//     html += '<div class="img-wrap">';
-//     html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-//     html += '</div>';
-//     html += '<div class="desc-wrap">';
-//     html += '<div class="title">';
-//     html += '<h4 class="title-wrap">'+v.title+'</h4>';
-//     html += '<div class="price">'+v.price+'</div>';
-//     html += '</div>';
-//     html += '<div class="article">';
-//     html += '<div class="year">'+v.year+'</div>';
-//     html += '<div class="opt-wrap">';
-//     html += '<div class="opt opt1">'+v.opt2+'</div>';
-//     html += '<div class="opt opt2">'+v.opt1+'</div>';
-//     html += '</div>';
-//     html += '</div>';
-//     html += '</div>';
-//     html += '</li>';
-//     $listWrap.append(html);
-//   })
-// $.get('../json/handynew.json', onGetData);
-// }
 
 function onActive(){
   $('.subject').css('color', '#fff')
@@ -124,9 +196,6 @@ function onShowSubnavi(){
 function onHideSubnavi(){
   $(this).find('.subnavi-wrapper').css({"opacity": "0", "visibility": "hidden"})
 }
-
-
-
 
 
 
