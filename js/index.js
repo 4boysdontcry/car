@@ -39,8 +39,6 @@ function slideMain() {
 slideMain();
 
 /*************** 이벤트 등록 *****************/
-
-
 $('.subnavi').on('mouseenter', onSubnavi)
 $('.subnavi').on('mouseleave', offSubnavi)
 $('.navi').on('mouseenter', onShowSubnavi)
@@ -84,9 +82,9 @@ function onChgNew(){
       html += '</div>';
       html += '</div>';
       html += '</li>';
-      if(r.handy == 1){
       html += '<li class="list-subwrap">';
       html += '<ul class="list-wrap">';
+
       html += '<li class="list li2 smli">';
       html += '<div class="img-wrap">';
       html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
@@ -161,17 +159,17 @@ function onChgNew(){
       html += '</li>';
       html += '</ul>';
       html += '</li>';
-    }
-    $('.list-wrapper').append(html);
+    $('.handy-wrapper .list-wrapper').append(html);
   })
 }
 $.get('../json/handynew.json', onGetData);
 }
 
+
 function onChgUsed(){   // json 파일의 데이터로 교체되는 로직짜기
   $('.bt-handy').removeClass('active')
+  $('.bt-used').addClass('active')
 }
-
 
 function onActive(){
   $('.subject').css('color', '#fff')
