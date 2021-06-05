@@ -108,7 +108,7 @@ display: flex; flex-direction: column; align-items: center;}
 .list .img-wrap img {width: 100%; height: 100%;}
 
 .desc-wrap {padding: .5em 2em;}
-.list-wrapper .list.li1 {max-width: 49%; margin-right: 1%; flex-grow: 1; flex-shrink: 1;}
+.list-wrapper .list.li1 {max-width: 49%; margin-right: 1%; flex-grow: 0; flex-shrink: 1;}
 .li1 .desc-wrap .title {width: 100%;}
 .li1 .desc-wrap .title h4 {font-size: 1.5em; padding: 1em 0; border-bottom: 1px solid #ddd;}
 .li1 .desc-wrap .article {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1em 0;}
@@ -149,7 +149,7 @@ display: flex; flex-direction: column; align-items: center;}
 .bt-wrap .bt-car {padding: .725em 1em; background-color: #eee; border-radius: 5px;}
 
 .popular-wrapper .list-wrapper {width: 100%; display: flex;}
-.list-wrapper .list {width: 20%;}
+/* .list-wrapper .list {width: 20%;} */
 
 /********************** why *********************/
 
