@@ -34,9 +34,44 @@ function movingTop(scTop) {
 
 function slideMain() {
   console.log('hi');
-	var swiper = new Swiper('.swiper-container', { auto: true, loop: true, delay: 3000 });
+	var swiper = new Swiper('.slide-wrap', { autoplay: { delay: 3000}, loop: true, });
 }
 slideMain();
+
+function slideInfo() {
+  function onGetData(r) {
+    r.handy.forEach(function (v, i) {
+      var html = '';
+      html += '<li class="swiper-slide slide">';
+      html += '<div class="img-wrap">';
+      html += '<img src="'+v.src+'" alt="사진">';
+      html += '</div>';
+      html += '<div class="bt-wrap">';
+      html += '<a class="call" href="tel:'+v.call+'"> <i class="bi-telephone-fill"></i> </a>';
+      html += '<a class="msg" href="mailto:'+v.email+'"> <i class="bi-envelope-fill"></i> </a>';
+      html += '</div>';
+      html += '<div class="person-info">';
+      html += '<div class="info-head">';
+      html += '<h6 class="name">'+v.email+'</h6>';
+      html += '<p class="job">Customer Advisor</p>';
+      html += '</div>';
+      html += '<div class="info-body">';
+      html += '<a href="mailto:'+v.email+'">'+v.email+'</a>';
+      html += '<a href="tel:'+v.call+'">'+v.call+'</a>';
+      html += '</div>';
+      html += '</div>';
+      html += '</li>';
+    $('.team-wrapper .slide-case').append(html);
+  })
+  var swiper = new Swiper('.slide-runner', { 
+    autoplay: { delay: 3000}, 
+    loop: true,
+    slidesPerView: 2,
+  });
+}
+$.get('../json/team.json', onGetData);
+}
+slideInfo();
 
 /*************** 이벤트 등록 *****************/
 $('.subnavi').on('mouseenter', onSubnavi)

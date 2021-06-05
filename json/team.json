@@ -1,0 +1,34 @@
+{
+	"handy": [
+		{
+			"src": "../img/team/emily.jpg",
+			"name": "Emily Rees",
+			"email": "emily@vehica.com",
+			"call": "(123) 345-6789"
+		},
+		{
+			"src": "../img/team/george.jpg",
+			"name": "George Brown",
+			"email": "george@vehica.com",
+			"call": "(123) 345-6789"
+		},
+		{
+			"src": "../img/team/isabella.jpg",
+			"name": "Isabella Evans",
+			"email": "isabella@vehica.com",
+			"call": "(123) 345-6789"
+		},
+		{
+			"src": "../img/team/jacob.jpg",
+			"name": "Jacob Austin",
+			"email": "jacob@vehica.com",
+			"call": "(123) 345-6789"
+		},
+		{
+			"src": "../img/team/kate.jpg",
+			"name": "Kate Hendricks",
+			"email": "kate@vehica.com",
+			"call": "(123) 345-6789"
+		}
+	]
+}

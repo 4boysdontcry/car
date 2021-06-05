@@ -93,7 +93,7 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** handy *********************/
-.handy-wrapper {width: 100%; color: #121212;}
+.handy-wrapper {width: 100%; color: #121212; margin: 5em 0;}
 .handy-wrapper .top-wrapper {display: flex; align-items: center; justify-content: space-between; margin: 2em 0;}
 .top-wrapper .title-wrap h3.subtitle {font-size: 1.5em; color: #ff4605; margin-bottom: .5em;}
 .top-wrapper .title-wrap h2.title {font-size: 3.5em; font-weight: 700;}
@@ -143,7 +143,7 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** why *********************/
-.why-wrapper {color: #121212;}
+.why-wrapper {color: #121212; margin-bottom: 6em;}
 .why-wrapper .why-head {padding: 2.5em 0; text-align: center;}
 .why-wrapper .why-head .why-title {font-size: 3em; font-weight: 800;}
 
@@ -167,7 +167,36 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** team *********************/
+.team-wrapper {}
+.team-wrap {width: 100%; height: 70vh; display: flex; justify-content: space-between; align-items: center; padding: 3em; border-radius: 20px; background-color: #3b3b3b;}
 
+.team-wrap .info-wrapper {width: 50%; margin: 0 3em; height: 100%;}
+.team-wrap .info-wrapper .title {margin-bottom: 1em; font-size: 3em; font-weight: 900;}
+.team-wrap .info-wrap .info {font-size: 1.17em; margin-bottom: 1em;}
+.team-wrap .info-wrap .btn {margin-top: 2em;}
+.team-wrap .info-wrap .info i {color: #ff4605; margin-right: .5em;}
+
+.slide-stage {width: 55%; height: 100%; position: relative;}
+.slide-runner {width: 100%; height: 100%;}
+.slide-runner .slide-case {width: 100%; position: absolute; top: 0; left: 0;}
+.slide-runner .slide-case .slide-wrap{width: 100%;}
+.slide-runner .slide-case .slide {max-width: 48%; height: 100%; color: #121212; background-color: #fff; border-radius: 20px; overflow: hidden; margin-right: 2%;}
+.slide .img-wrap {width: 100%; height: 60%; position: relative; overflow: hidden;}
+.slide .img-wrap img {width: 100%;}
+
+.slide .bt-wrap {display: flex; align-items: center; position: absolute; bottom: 35%; left: 25%; transform: translate(-50%, -50%); font-size: 1.5em;}
+.slide .bt-wrap a {margin-right: 2%;}
+.slide .bt-wrap a > i {color: #fff; padding: .3em .5em; background-color: #ff4605; border-radius: 10px;}
+
+.slide .person-info {padding: 1em;}
+.slide .person-info > * {padding: .75em;}
+.slide .person-info .info-head {border-bottom: 1px solid #eee;}
+.slide .person-info .info-head .name {font-size: 1.25em; font-weight: 700; margin-bottom: .425em;}
+.slide .person-info .info-head .job {color: #bbb;}
+
+.slide .person-info .info-body {display: flex; flex-direction: column; font-weight: 600; font-size: 1.125em;}
+.slide .person-info .info-body a:first-child {margin-bottom: .5em;  color: #ff4605;}
+.slide .person-info .info-body a:last-child {color: #bbb;}
 
 
 /********************** down *********************/
