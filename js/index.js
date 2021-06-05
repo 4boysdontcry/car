@@ -85,10 +85,11 @@ function onChgNew(){
         html += '</div>';
         html += '</li>';
       }
-      for(i=0; i<v.length; i++){
+      if(i == 1){
         html += '<li class="list-subwrap">';
         html += '<ul class="list-wrap">';
-        html += '<li class="list li2 smli">';
+        for(i=1; i<r.handy.length; i++){
+        html += '<li class="list smli">';
         html += '<div class="img-wrap">';
         html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
         html += '</div>';
@@ -106,67 +107,11 @@ function onChgNew(){
         html += '</div>';
         html += '</div>';
         html += '</li>';
-
-        html += '<li class="list li3 smli">';
-        html += '<div class="img-wrap">';
-        html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-        html += '</div>';
-        html += '<div class="desc-wrap">';
-        html += '<div class="title">';
-        html += '<h4 class="title-wrap">'+v.title+'</h4>';
-        html += '<div class="price">'+v.price+'</div>';
-        html += '</div>';
-        html += '<div class="article">';
-        html += '<div class="year">'+v.year+'</div>';
-        html += '<div class="opt-wrap">';
-        html += '<div class="opt opt1">'+v.opt1+'</div>';
-        html += '<div class="opt opt2">'+v.opt2+'</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</li>';
-      
-          html += '<li class="list li4 smli">';
-          html += '<div class="img-wrap">';
-          html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-          html += '</div>';
-          html += '<div class="desc-wrap">';
-          html += '<div class="title">';
-          html += '<h4 class="title-wrap">'+v.title+'</h4>';
-          html += '<div class="price">'+v.price+'</div>';
-          html += '</div>';
-          html += '<div class="article">';
-          html += '<div class="year">'+v.price+'</div>';
-          html += '<div class="opt-wrap">';
-          html += '<div class="opt opt1">'+v.opt1+'</div>';
-          html += '<div class="opt opt2">'+v.opt2+'</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</li>';
-        
-          html += '<li class="list li5 smli">';
-          html += '<div class="img-wrap">';
-          html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-          html += '</div>';
-          html += '<div class="desc-wrap">';
-          html += '<div class="title">';
-          html += '<h4 class="title-wrap">'+v.title+'r</h4>';
-          html += '<div class="price">'+v.price+'</div>';
-          html += '</div>';
-          html += '<div class="article">';
-          html += '<div class="year">'+v.price+'</div>';
-          html += '<div class="opt-wrap">';
-          html += '<div class="opt opt1">'+v.opt1+'</div>';
-          html += '<div class="opt opt2">'+v.opt2+'</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</li>';
-          html += '</ul>';
-          html += '</li>';
-        }
-      $('.handy-wrapper .list-wrapper').append(html);
+      }
+      html += '</ul>';
+      html += '</li>';
+    }
+    $('.handy-wrapper .list-wrapper').append(html);
   })
 }
 $.get('../json/handynew.json', onGetData);
@@ -179,112 +124,55 @@ function onChgUsed(){
   $('.handy-wrapper .list-wrapper').empty();
   function onGetData(r) {
     r.handy.forEach(function (v, i) {
+      // console.log(i)
       var html = '';
       if(i == 0){
-      html += '<li class="list li1">';
-      html += '<div class="img-wrap">';
-      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-      html += '</div>';
-      html += '<div class="desc-wrap">';
-      html += '<div class="title">';
-      html += '<h4 class="title-wrap">'+v.title+'</h4>';
-      html += '</div>';
-      html += '<div class="article">';
-      html += '<div class="year">'+v.year+'</div>';
-      html += '<div class="opt-wrap">';
-      html += '<div class="opt opt1">'+v.opt1+'</div>';
-      html += '<div class="opt opt2">'+v.opt2+'</div>';
-      html += '</div>';
-      html += '<div class="price">'+v.price+'</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</li>';
-    }
-    html += '<li class="list-subwrap">';
-    html += '<ul class="list-wrap">';
-      if(i == 1){
-      html += '<li class="list li2 smli">';
-      html += '<div class="img-wrap">';
-      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-      html += '</div>';
-      html += '<div class="desc-wrap">';
-      html += '<div class="title">';
-      html += '<h4 class="title-wrap">'+v.title+'</h4>';
-      html += '<div class="price">'+v.price+'</div>';
-      html += '</div>';
-      html += '<div class="article">';
-      html += '<div class="year">'+v.year+'</div>';
-      html += '<div class="opt-wrap">';
-      html += '<div class="opt opt1">'+v.opt1+'</div>';
-      html += '<div class="opt opt2">'+v.opt2+'</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</li>';
+        html += '<li class="list li1">';
+        html += '<div class="img-wrap">';
+        html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+        html += '</div>';
+        html += '<div class="desc-wrap">';
+        html += '<div class="title">';
+        html += '<h4 class="title-wrap">'+v.title+'</h4>';
+        html += '</div>';
+        html += '<div class="article">';
+        html += '<div class="year">'+v.year+'</div>';
+        html += '<div class="opt-wrap">';
+        html += '<div class="opt opt1">'+v.opt1+'</div>';
+        html += '<div class="opt opt2">'+v.opt2+'</div>';
+        html += '</div>';
+        html += '<div class="price">'+v.price+'</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</li>';
       }
-      else if(i == 2){
-      html += '<li class="list li3 smli">';
-      html += '<div class="img-wrap">';
-      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-      html += '</div>';
-      html += '<div class="desc-wrap">';
-      html += '<div class="title">';
-      html += '<h4 class="title-wrap">'+v.title+'</h4>';
-      html += '<div class="price">'+v.price+'</div>';
-      html += '</div>';
-      html += '<div class="article">';
-      html += '<div class="year">'+v.year+'</div>';
-      html += '<div class="opt-wrap">';
-      html += '<div class="opt opt1">'+v.opt1+'</div>';
-      html += '<div class="opt opt2">'+v.opt2+'</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</div>';
+      if(i == 1){
+        html += '<li class="list-subwrap">';
+        html += '<ul class="list-wrap">';
+        for(i=1; i<r.handy.length; i++){
+        html += '<li class="list smli">';
+        html += '<div class="img-wrap">';
+        html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
+        html += '</div>';
+        html += '<div class="desc-wrap">';
+        html += '<div class="title">';
+        html += '<h4 class="title-wrap">'+v.title+'</h4>';
+        html += '<div class="price">'+v.price+'</div>';
+        html += '</div>';
+        html += '<div class="article">';
+        html += '<div class="year">'+v.year+'</div>';
+        html += '<div class="opt-wrap">';
+        html += '<div class="opt opt1">'+v.opt1+'</div>';
+        html += '<div class="opt opt2">'+v.opt2+'</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</li>';
+      }
+      html += '</ul>';
       html += '</li>';
     }
-    else if(i == 3){
-      html += '<li class="list li4 smli">';
-      html += '<div class="img-wrap">';
-      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-      html += '</div>';
-      html += '<div class="desc-wrap">';
-      html += '<div class="title">';
-      html += '<h4 class="title-wrap">'+v.title+'</h4>';
-      html += '<div class="price">'+v.price+'</div>';
-      html += '</div>';
-      html += '<div class="article">';
-      html += '<div class="year">'+v.price+'</div>';
-      html += '<div class="opt-wrap">';
-      html += '<div class="opt opt1">'+v.opt1+'</div>';
-      html += '<div class="opt opt2">'+v.opt2+'</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</li>';
-    }
-    else if(i == 4){
-      html += '<li class="list li5 smli">';
-      html += '<div class="img-wrap">';
-      html += '<img class="img" src="'+v.src+'" alt="차량이미지">';
-      html += '</div>';
-      html += '<div class="desc-wrap">';
-      html += '<div class="title">';
-      html += '<h4 class="title-wrap">'+v.title+'r</h4>';
-      html += '<div class="price">'+v.price+'</div>';
-      html += '</div>';
-      html += '<div class="article">';
-      html += '<div class="year">'+v.price+'</div>';
-      html += '<div class="opt-wrap">';
-      html += '<div class="opt opt1">'+v.opt1+'</div>';
-      html += '<div class="opt opt2">'+v.opt2+'</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</div>';
-      html += '</li>';
-    }
-    html += '</ul>';
-    html += '</li>';
-    $('.handy-wrapper .list-wrapper').append(html);
+      $('.handy-wrapper .list-wrapper').append(html);
   })
 }
 $.get('../json/handyused.json', onGetData);

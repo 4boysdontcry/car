@@ -104,8 +104,8 @@ display: flex; flex-direction: column; align-items: center;}
 .handy-wrapper .list-wrapper {width: 100%; height: 680px; display: flex; justify-content: space-between;}
 .list-wrapper .list {background-color: #222732; border-radius: 15px; overflow: hidden; color: #fff;}
 .list-wrapper .list:hover img {transform: scale(1.1); transition: all 1s;}
-.list .img-wrap {width: 100%; overflow: hidden;}
-.list .img-wrap img {width: 100%; height: 100%;}
+.list .img-wrap {width: 100%; height: 70%; overflow: hidden;}
+.list .img-wrap img {width: 100%;}
 
 .desc-wrap {padding: .5em 2em;}
 .list-wrapper .list.li1 {max-width: 49%; margin-right: 1%; flex-grow: 0; flex-shrink: 1;}
@@ -117,8 +117,8 @@ display: flex; flex-direction: column; align-items: center;}
 .li1 .desc-wrap .article .opt-wrap > *:not(:last-child) {margin-right: 1em;}
 .li1 .desc-wrap .article .price {font-size: 2em; font-weight: 700;}
 
-.list-wrapper .list-wrap {max-width: 50%; height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
 .list-wrapper .list-subwrap {width: 100%;}
+.list-wrapper .list-subwrap .list-wrap {width: 100%;height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
 .list-wrapper .list-wrap .list {width: 49%; max-height: 49%; margin: 0 1% 1% 0;}
 .list-wrapper .list-wrap .list:nth-child(3) { margin: 0 1% 0 0;;}
 .list-wrapper .list-wrap .list:nth-child(4) { margin: 0 1% 0 0;}
@@ -142,17 +142,28 @@ display: flex; flex-direction: column; align-items: center;}
 .bt-wrap > .bt-view {font-size: 1.5em; background-color: #ff4605; border-radius: 5px; padding: .5em 1.25em; color: #fff;} 
 
 
-/********************** popular *********************/
-.popular-wrapper {width: 100%; background-color: #def1ff; padding: 2em 0;}
-.popular-wrapper .title-wrapper {display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;}
-.title-wrap .title {font-size: 3em; font-weight: 700; color: #121212;}
-.bt-wrap .bt-car {padding: .725em 1em; background-color: #eee; border-radius: 5px;}
-
-.popular-wrapper .list-wrapper {width: 100%; display: flex;}
-/* .list-wrapper .list {width: 20%;} */
-
 /********************** why *********************/
+.why-wrapper {color: #121212;}
+.why-wrapper .why-head {padding: 2.5em 0; text-align: center;}
+.why-wrapper .why-head .why-title {font-size: 3em; font-weight: 800;}
 
+.why-wrapper .why-body {}
+.why-body .whylist-wrapper {display: flex; justify-content: space-between; align-items: center;}
+.why-body .whylist-wrapper .whylist {text-align: center;}
+.whylist .icon-wrap {display: inline-block; border-radius: 50%;}
+
+.whylist .icon-wrap {margin-bottom: 3em;}
+.whylist:nth-child(1) .icon-wrap {background-color: #ffdccf;}
+.whylist:nth-child(2) .icon-wrap {background-color: #e7ffd3;}
+.whylist:nth-child(3) .icon-wrap {background-color: #d1f3ff;}
+.whylist .icon-wrap i {font-size: 2em; padding: .725em; line-height: 1.2;}
+.whylist:nth-child(1) .icon-wrap i {color: #ff4400; font-size: 2em; padding: 0 .8em; line-height: 2.6;}
+.whylist:nth-child(2) .icon-wrap i {color: #5eff00;}
+.whylist:nth-child(3) .icon-wrap i {color: #00bbff;}
+
+.whylist .title {font-size: 1.5em; font-weight: 800; margin-bottom: 1em;}
+.whylist .desc-wrap p {line-height: 1.7; color: #bbb;}
+.whylist:hover .desc-wrap p {color: #121212; transition: all 1s;}
 
 
 /********************** team *********************/
