@@ -197,10 +197,11 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** app *********************/
-.app-wrapper {width: 100%; margin-bottom: 5em;}
+.app-wrapper {width: 100%; margin-bottom: 9em;}
 .app-wrapper .bar-wrapper {width: calc(100% - 100px); height: 50px; margin: 0 auto; margin-bottom: 5em;}
 .bar-wrapper .spon-wrapper {width: 100%; height: 100%;}
-.spon-wrapper .spon {max-width: 15%; margin: 0 5%;}
+.spon-wrapper .spon {max-width: 15%; margin: 0 5%; color: #bbb;}
+/* .spon-wrapper .spon a {color: #bbb;} */ 
 .spon-wrapper .spon img {width: 100%; height: 100%;}
 
 .down-wrapper {width: 100%; display: flex; justify-content: space-between; align-items: center; color: #121212;}
@@ -225,7 +226,15 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** news *********************/
-
+.news-wrapper {width: 100%; border-top: 1px solid #eee; color: #121212; padding: 3em 0;}
+.news-wrapper .cont-wrapper {display: flex; justify-content: space-between; align-items: center;}
+.news-wrapper .content:nth-child(1) {width: 20%;}
+.news-wrapper .content:nth-child(2) {width: 50%;}
+.news-wrapper .content:nth-child(3) {width: 20%;}
+.content h5.title {font-size: 2em; font-weight: 700;}
+.content .email-form {width: 100%;}
+.content .email-form input {width: 70%; border: 1px solid #bbb; border-radius: 5px; padding: .5em 1em; margin-right: 1em;}
+.content .email-form .bt-cont {background-color: #ff4605; color: #fff; padding: 1em 2em; border-radius: 10px;}
 
 
 /********************** footer *********************/
