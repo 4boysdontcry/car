@@ -1,5 +1,5 @@
 /********************** 글로벌 설정 *********************/
-html, body {font-size: 16px; color: #fff; height: 6000px;}
+html, body {font-size: 16px; color: #fff;}
 .wrapper {max-width: 1300px; margin: auto;}
 
 /********************** common *********************/
@@ -226,7 +226,7 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** news *********************/
-.news-wrapper {width: 100%; border-top: 1px solid #eee; color: #121212; padding: 3em 0;}
+.news-wrapper {width: 100%; border-top: 1px solid #eee; color: #121212; padding: 5em 0;}
 .news-wrapper .cont-wrapper {display: flex; justify-content: space-between; align-items: center;}
 .news-wrapper .content:nth-child(1) {width: 20%;}
 .news-wrapper .content:nth-child(2) {width: 50%;}
