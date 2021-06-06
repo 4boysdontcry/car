@@ -27,6 +27,7 @@ function scrollNotice(scTop) {
     $header.find('.logo-wrap .logo').attr('src', '../img/logo-header-black.webp')
   }
 }
+
 function movingTop(scTop) {
   if(scTop === 0) $('.bt-moving-top').removeClass('active');
   else $('.bt-moving-top').addClass('active');
@@ -52,7 +53,7 @@ function slideInfo() {
       html += '</div>';
       html += '<div class="person-info">';
       html += '<div class="info-head">';
-      html += '<h6 class="name">'+v.email+'</h6>';
+      html += '<h6 class="name">'+v.name+'</h6>';
       html += '<p class="job">Customer Advisor</p>';
       html += '</div>';
       html += '<div class="info-body">';
@@ -72,6 +73,12 @@ function slideInfo() {
 $.get('../json/team.json', onGetData);
 }
 slideInfo();
+
+function sponSlide(){
+  var swiper = new Swiper('.bar-wrapper', { autoplay: { delay: 5000}, loop: true, slidesPerView: 4,});
+}
+sponSlide();
+
 
 /*************** 이벤트 등록 *****************/
 $('.subnavi').on('mouseenter', onSubnavi)

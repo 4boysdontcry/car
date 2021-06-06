@@ -1,10 +1,8 @@
 /********************** 글로벌 설정 *********************/
-html, body {font-size: 16px; color: #fff; height: 3000px;}
+html, body {font-size: 16px; color: #fff; height: 6000px;}
 .wrapper {max-width: 1300px; margin: auto;}
 
 /********************** common *********************/
-/* car-box는 차량소개 박스 */
-.car-box {}
 
 
 /********************** header *********************/
@@ -147,7 +145,6 @@ display: flex; flex-direction: column; align-items: center;}
 .why-wrapper .why-head {padding: 2.5em 0; text-align: center;}
 .why-wrapper .why-head .why-title {font-size: 3em; font-weight: 800;}
 
-.why-wrapper .why-body {}
 .why-body .whylist-wrapper {display: flex; justify-content: space-between; align-items: center;}
 .why-body .whylist-wrapper .whylist {text-align: center;}
 .whylist .icon-wrap {display: inline-block; border-radius: 50%;}
@@ -167,7 +164,7 @@ display: flex; flex-direction: column; align-items: center;}
 
 
 /********************** team *********************/
-.team-wrapper {}
+.team-wrapper {margin-bottom: 5em;}
 .team-wrap {width: 100%; height: 70vh; display: flex; justify-content: space-between; align-items: center; padding: 3em; border-radius: 20px; background-color: #3b3b3b;}
 
 .team-wrap .info-wrapper {width: 50%; margin: 0 3em; height: 100%;}
@@ -199,7 +196,25 @@ display: flex; flex-direction: column; align-items: center;}
 .slide .person-info .info-body a:last-child {color: #bbb;}
 
 
-/********************** down *********************/
+/********************** app *********************/
+.app-wrapper {width: 100%;}
+.app-wrapper .bar-wrapper {width: calc(100% - 100px); height: 50px; margin: 0 auto; margin-bottom: 5em;}
+.bar-wrapper .spon-wrapper {width: 100%; height: 100%;}
+.spon-wrapper .spon {max-width: 15%; margin: 0 5%;}
+.spon-wrapper .spon img {width: 100%; height: 100%;}
+
+.down-wrapper {width: 100%; display: flex; justify-content: space-between; align-items: center; color: #121212;}
+
+.down-wrapper .app-wrap {display: flex; justify-content: space-between; align-items: center; background-color: #ff4605; padding: 5em 3em; border-radius: 20px; width: 48%; margin-right: 2%;}
+.app-wrap .cont-box {width: 50%;}
+.cont-box h6.title {font-size: 3em; font-weight: 700; margin-bottom: 1em;}
+.cont-box .bt-wrap {display: flex; flex-direction: column; justify-content: center; width: 60%;}
+.cont-box .bt-ios {margin-bottom: 1em;}
+.cont-box .bt-cont {background-color: #fff; color: #ff4605; padding: .5em 0; text-align: center;}
+
+.cont-box2 {width: 50%; position: relative;}
+.cont-box2 .img-wrap {position: absolute; top: -120px; left: 50px;}
+.cont-box2 .img-wrap img {width: 100%;}
 
 
 
