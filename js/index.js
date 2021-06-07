@@ -85,6 +85,10 @@ function sponSlide() {
     autoplay: {
       delay: 5000
     },
+    navigation: {
+      nextEl: '.bt-next',
+      prevEl: '.bt-prev',
+    },
     loop: true,
     slidesPerView: 4,
   });
@@ -114,8 +118,8 @@ function onScroll(e) {
 function onChgNew() {
   $('.bt-handy').removeClass('active');
   $('.bt-new').addClass('active');
-  // $('.handy-wrapper .list-wrapper').empty();
-
+  $('.handy-wrapper .list-wrap').empty();
+  $('.handy-wrapper .li1').empty();
   function genHTML(v, i) {
     var html = '';
     if(i > 0) html += '<li class="list">';
@@ -138,7 +142,6 @@ function onChgNew() {
     if(i > 0) html += '</li>';
     return html;
   }
-
   function onGetData(r) {
     r.handy.forEach(function (v, i) {
       if(i == 0) $('.handy-wrapper .list-wrapper .li1').append(genHTML(v, i));
@@ -148,63 +151,37 @@ function onChgNew() {
   $.get('../json/handynew.json', onGetData);
 }
 
-
 function onChgUsed() {
   $('.bt-handy').removeClass('active');
   $('.bt-used').addClass('active');
-  $('.handy-wrapper .list-wrapper').empty();
-
+  $('.handy-wrapper .list-wrap').empty();
+  $('.handy-wrapper .li1').empty();
+  function genHTML(v, i) {
+    var html = '';
+    if(i > 0) html += '<li class="list">';
+    html += '<div class="img-wrap">';
+    html += '<img class="img" src="' + v.src + '" alt="차량이미지">';
+    html += '</div>';
+    html += '<div class="desc-wrap">';
+    html += '<div class="title">';
+    html += '<h4 class="title-wrap">' + v.title + '</h4>';
+    html += '</div>';
+    html += '<div class="article">';
+    html += '<div class="year">' + v.year + '</div>';
+    html += '<div class="opt-wrap">';
+    html += '<div class="opt opt1">' + v.opt1 + '</div>';
+    html += '<div class="opt opt2">' + v.opt2 + '</div>';
+    html += '</div>';
+    html += '<div class="price">' + v.price + '</div>';
+    html += '</div>';
+    html += '</div>';
+    if(i > 0) html += '</li>';
+    return html;
+  }
   function onGetData(r) {
     r.handy.forEach(function (v, i) {
-      // console.log(i)
-      var html = '';
-      if (i == 0) {
-        html += '<li class="list li1">';
-        html += '<div class="img-wrap">';
-        html += '<img class="img" src="' + v.src + '" alt="차량이미지">';
-        html += '</div>';
-        html += '<div class="desc-wrap">';
-        html += '<div class="title">';
-        html += '<h4 class="title-wrap">' + v.title + '</h4>';
-        html += '</div>';
-        html += '<div class="article">';
-        html += '<div class="year">' + v.year + '</div>';
-        html += '<div class="opt-wrap">';
-        html += '<div class="opt opt1">' + v.opt1 + '</div>';
-        html += '<div class="opt opt2">' + v.opt2 + '</div>';
-        html += '</div>';
-        html += '<div class="price">' + v.price + '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</li>';
-      }
-      if (i == 1) {
-        html += '<li class="list-subwrap">';
-        html += '<ul class="list-wrap">';
-        for (i = 1; i < r.handy.length; i++) {
-          html += '<li class="list smli">';
-          html += '<div class="img-wrap">';
-          html += '<img class="img" src="' + v.src + '" alt="차량이미지">';
-          html += '</div>';
-          html += '<div class="desc-wrap">';
-          html += '<div class="title">';
-          html += '<h4 class="title-wrap">' + v.title + '</h4>';
-          html += '<div class="price">' + v.price + '</div>';
-          html += '</div>';
-          html += '<div class="article">';
-          html += '<div class="year">' + v.year + '</div>';
-          html += '<div class="opt-wrap">';
-          html += '<div class="opt opt1">' + v.opt1 + '</div>';
-          html += '<div class="opt opt2">' + v.opt2 + '</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</div>';
-          html += '</li>';
-        }
-        html += '</ul>';
-        html += '</li>';
-      }
-      $('.handy-wrapper .list-wrapper').append(html);
+      if(i == 0) $('.handy-wrapper .list-wrapper .li1').append(genHTML(v, i));
+      else $('.handy-wrapper .list-wrapper .list-wrap').append(genHTML(v, i));
     })
   }
   $.get('../json/handyused.json', onGetData);
