@@ -102,7 +102,7 @@ display: flex; flex-direction: column; align-items: center;}
 .handy-wrapper .list-wrapper {width: 100%; height: 680px; display: flex; justify-content: space-between;}
 .list-wrapper .list {background-color: #222732; border-radius: 15px; overflow: hidden; color: #fff;}
 .list-wrapper .list:hover img {transform: scale(1.1); transition: all 1s;}
-.list .img-wrap {width: 100%; height: 70%; overflow: hidden;}
+.list .img-wrap {width: 100%; max-height: 70%; overflow: hidden;}
 .list .img-wrap img {width: 100%;}
 
 .desc-wrap {padding: .5em 2em;}
